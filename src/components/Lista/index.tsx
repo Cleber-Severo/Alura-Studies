@@ -23,10 +23,9 @@ function Lista() {
         <h2>Estudos do dia</h2>
         <ul>
           {tarefas.map((item, index) => (
-            <Item 
+            <Item
               index={index}
-              tarefa={item.tarefa}
-              tempo={item.tempo} 
+              {...item}
             />
           ))}
         </ul>
