@@ -1,11 +1,13 @@
+import style from './Relogio.module.scss'
+
 const Relogio = () => {
   return (
     <>
-      <span>0</span>
-      <span>0</span>
-      <span>:</span>
-      <span>0</span>
-      <span>0</span>
+      <span className={style.relogioNumero}>0</span>
+      <span className={style.relogioNumero}>0</span>
+      <span className={style.relogioDivisao}>:</span>
+      <span className={style.relogioNumero}>0</span>
+      <span className={style.relogioNumero}>0</span>
     </>
   );
 };
