@@ -3,13 +3,18 @@ import Item from "./Item";
 import { Itarefa } from "../../types/tarefa";
 
 
-function Lista({ tarefas }: { tarefas: Itarefa[] }) {
+interface ListaProps {
+  tarefas: Itarefa[];
+  selecionaTarefa: (tarefaSelecionada: Itarefa) => void;
+}
+
+function Lista({ tarefas, selecionaTarefa }: ListaProps) {
   return (
     <aside className={style.listaTarefas}>
       <h2>Estudos do dia</h2>
       <ul>
-        {tarefas.map((item, index) => (
-          <Item key={index} {...item} />
+        {tarefas.map((item) => (
+          <Item selecionaTarefa={selecionaTarefa} key={item.id} {...item} />
         ))}
       </ul>
     </aside>
