@@ -14,7 +14,6 @@ const Item = (
     id, 
     selecionaTarefa
   }: ItemProps ) => {
-  console.log({ tarefa, tempo, selecionado, completado, id });
   
   return (
     <li
